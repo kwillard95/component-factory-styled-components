@@ -4,16 +4,19 @@ import { withCustomTheme} from './with-custom-theme';
 // import { Default } from './stories/styled-button.stories'
 
 const myCustomTheme = {
-  colors: {
-    lightest: "hotpink",
-    secondary: "cyan",
-    primary: "yellow"
+  palette: {
+    primary: {
+      light: 'pink',
+      main: 'blue',
+      dark: 'black',
+      contrastText: 'purple'
+    },
   }
 };
 
 const MyNewThemedButton = withCustomTheme(Button, myCustomTheme)
 
-const onClick = () => alert("clicky!!");
+const onClick = () => console.log('Button Clicked!');
 
 const App = () => (
   <div>

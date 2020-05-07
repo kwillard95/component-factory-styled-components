@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from "styled-components";
-import LightTheme from './themes/light-theme';
+import designTokens from './themes/design-tokens';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-  <ThemeProvider theme={LightTheme}>
+  <ThemeProvider theme={designTokens}>
     <App />
   </ThemeProvider>,
   document.getElementById('root')

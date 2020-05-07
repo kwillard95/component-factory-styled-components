@@ -22,10 +22,10 @@ import React from 'react';
 
 
 import { ThemeProvider } from "styled-components";
-import LightTheme from "../src/themes/light-theme";
+import designTokens from "../src/themes/design-tokens";
 
 const StylesDecorator = storyFn => (
-   <ThemeProvider theme={LightTheme}>
+   <ThemeProvider theme={designTokens}>
       {storyFn()}
     </ThemeProvider>);
 
