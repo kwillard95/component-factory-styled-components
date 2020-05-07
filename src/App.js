@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button } from './components/styled-button';
+import { withCustomTheme} from './with-custom-theme';
+// import { Default } from './stories/styled-button.stories'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const myCustomTheme = {
+  colors: {
+    lightest: "hotpink",
+    secondary: "cyan",
+    primary: "yellow"
+  }
+};
+
+const MyNewThemedButton = withCustomTheme(Button, myCustomTheme)
+
+const onClick = () => alert("clicky!!");
+
+const App = () => (
+  <div>
+    <Button onClick={onClick}>Button</Button>
+    <MyNewThemedButton onClick={onClick}>New Theme Button</MyNewThemedButton>
+  </div>
+);
 
 export default App;
