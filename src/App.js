@@ -11,6 +11,12 @@ const myCustomTheme = {
       dark: 'black',
       contrastText: 'purple'
     },
+    secondary: {
+      light: '#a2b9bc',
+      main: '#b2ad7f',
+      dark: '#878f99',
+      contrastText: '#6b5b95'
+    },
   }
 };
 
@@ -20,8 +26,8 @@ const onClick = () => console.log('Button Clicked!');
 
 const App = () => (
   <div>
-    <Button onClick={onClick}>Button</Button>
-    <MyNewThemedButton onClick={onClick}>New Theme Button</MyNewThemedButton>
+    <Button onClick={onClick} variant="secondary">Button</Button>
+    <MyNewThemedButton onClick={onClick} variant="primary">New Theme Button</MyNewThemedButton>
   </div>
 );
 
