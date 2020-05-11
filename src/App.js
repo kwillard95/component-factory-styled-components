@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './components/styled-button';
+import { Button } from './components/Button/Button';
 import { withCustomTheme} from './with-custom-theme';
 // import { Default } from './stories/styled-button.stories'
 
@@ -20,11 +20,11 @@ const myCustomTheme = {
   }
 };
 
-const MyNewThemedButton = withCustomTheme(Button, myCustomTheme)
+export const MyNewThemedButton = withCustomTheme(Button, myCustomTheme)
 
 const onClick = () => console.log('Button Clicked!');
 
-const App = () => (
+export const App = () => (
   <div>
     <Button onClick={onClick} variant="secondary">Button</Button>
     <MyNewThemedButton onClick={onClick} variant="primary">New Theme Button</MyNewThemedButton>
