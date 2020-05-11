@@ -1,7 +1,17 @@
 import { css } from 'styled-components';
 
 
-const style = ({ theme, ...rest }) => css`
+export const textStyle = ({ theme, ...rest }) => css`
+  font-family: ${theme.typography.button.fontFamily};
+  cursor: pointer;
+  color: ${props => props.variant ? theme.palette.primary.dark : theme.palette.secondary.dark};
+  :hover {
+    color: ${props => props.variant ? theme.palette.primary.main : theme.palette.secondary.main}
+  }
+`
+
+
+export const containedStyle = ({ theme, ...rest }) => css`
   border-color: ${props => props.variant === 'primary' ? theme.palette.primary.dark : theme.palette.secondary.dark };
   background-color: ${props => props.variant === 'primary' ? theme.palette.primary.light : theme.palette.secondary.light };
   color: ${props => props.variant === 'primary' ? theme.palette.primary.contrastText : theme.palette.secondary.contrastText };
@@ -16,7 +26,6 @@ const style = ({ theme, ...rest }) => css`
   } 
 `;
 
-export default style;
 
 
 

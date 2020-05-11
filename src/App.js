@@ -26,8 +26,10 @@ const onClick = () => console.log('Button Clicked!');
 
 export const App = () => (
   <div>
-    <Button onClick={onClick} variant="secondary">Button</Button>
-    <MyNewThemedButton onClick={onClick} variant="primary">New Theme Button</MyNewThemedButton>
+    <Button onClick={onClick} variant="text" styleType="secondary">Button</Button>
+    <Button onClick={onClick} variant="contained" styleType="secondary">Button</Button>
+    <MyNewThemedButton onClick={onClick} variant="contained" styleType="primary">New Theme Button</MyNewThemedButton>
+    <MyNewThemedButton onClick={onClick} variant="text" styleType="primary">New Theme Button</MyNewThemedButton>
   </div>
 );
 
