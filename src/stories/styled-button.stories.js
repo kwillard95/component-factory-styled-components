@@ -11,18 +11,23 @@ export default {
 
 export const Default = () => {
   return (
-    <Button variant="text" styleType="secondary">Button</Button>
+      <Button onClick={action('Styled button clicked')} variant="text" styleType="secondary">Button</Button>
   )
 }
 
 export const Contained = () => {
   return (
-    <Button variant="contained" styleType="primary">Button</Button>
+    <Button onClick={action('Styled button clicked')} variant="contained" styleType="primary">Button</Button>
   )
 }
 
-export const CustomTheme = () => {
+export const LinkCustomTheme = () => {
   return (
     <MyNewThemedButton styleType="primary" onClick={action('Styled button clicked')}>Styled Button</MyNewThemedButton>
+  )
+}
+export const ContainedCustomTheme = () => {
+  return (
+    <MyNewThemedButton variant="contained" styleType="primary" onClick={action('Styled button clicked')}>Styled Button</MyNewThemedButton>
   )
 }
