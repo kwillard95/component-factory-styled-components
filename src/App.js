@@ -66,10 +66,15 @@ const myCustomTheme = {
 export const MyNewThemedButton = withCustomTheme(Button, myCustomTheme);
 
 export const App = () => {
-  const [isSelected, setIsSelected] = useState(false);
+  const [isFemaleSelected, setIsFemaleSelected] = useState(false);
+  const [isMaleSelected, setIsMaleSelected] = useState(false);
 
-  const toggleButton = () => {
-    setIsSelected(!isSelected);
+  const toggleButton = (e) => {
+    if (e.target.value === 'female') {
+      setIsFemaleSelected(!isFemaleSelected);
+    } else {
+      setIsMaleSelected(!isMaleSelected);
+    }
   };
 
   const onClick = () => console.log("Button Clicked!");
@@ -77,37 +82,37 @@ export const App = () => {
   return (
     <div>
       <Button onClick={onClick} variant="text" styleType="primary">
-        Button
+        Submit
       </Button>
       <Button onClick={onClick} variant="contained" styleType="secondary">
-        Button
+        Submit
       </Button>
       <MyNewThemedButton
         onClick={onClick}
         variant="contained"
         styleType="primary"
       >
-        New Button
+        Submit
       </MyNewThemedButton>
       <MyNewThemedButton onClick={onClick} variant="text" styleType="primary">
-        New Button
+        Submit
       </MyNewThemedButton>
       <div>
         <RadioButton
           label="Female"
-          name="gender"
+          name="female"
           value="female"
-          checked={isSelected}
-          onChange={toggleButton}
+          checked={isFemaleSelected}
+          onChange={(e) => toggleButton(e)}
         />
       </div>
       <div>
         <RadioButton
           label="Male"
-          name="gender"
-          value="female"
-          checked={isSelected}
-          onChange={toggleButton}
+          name="female"
+          value="male"
+          checked={isMaleSelected}
+          onChange={(e) => toggleButton(e)}
         />
       </div>
     </div>

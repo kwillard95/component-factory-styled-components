@@ -9,16 +9,21 @@ export default {
 
 export const Default = () => {
 
-  const [isSelected, setIsSelected] = useState(false);
+  const [isFemaleSelected, setIsFemaleSelected] = useState(false);
+  const [isMaleSelected, setIsMaleSelected] = useState(false);
 
-  const toggleButton = () => {
-    setIsSelected(!isSelected);
-    action('Radio button clicked');
-  }
+  const toggleButton = (e) => {
+    if (e.target.value === 'female') {
+      setIsFemaleSelected(!isFemaleSelected);
+    } else {
+      setIsMaleSelected(!isMaleSelected);
+    }
+  };
 
   return (
     <div>
-      <RadioButton label="Female" name="gender" value="female" checked={isSelected} onClick={toggleButton}/>
+      <RadioButton label="Female" name="female" value="female" checked={isFemaleSelected} onClick={toggleButton}/>
+      <RadioButton label="Male" name="male" value="male" checked={isMaleSelected} onClick={toggleButton}/>
     </div>
   )
 }
