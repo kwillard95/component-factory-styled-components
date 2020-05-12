@@ -1,17 +1,33 @@
-import React from 'react';
-import styled from'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { textStyle, containedStyle } from './Button-style';
+import { textStyle, containedStyle } from "./Button-style";
 
-export const Button = ({ onClick, variant = "text", styleType = "primary", children }) => {
-  let ButtonBase;
+const TextButton = styled.a([textStyle]);
+const ContainedButton = styled.button([containedStyle]);
+
+export const Button = ({
+  onClick,
+  variant = "text",
+  styleType = "primary",
+  children,
+}) => {
   if (variant === "text") {
-    ButtonBase = styled.a([textStyle]);
-  } else if (variant === "contained") {
-    ButtonBase = styled.button([containedStyle]);
+    return (
+      <TextButton onClick={onClick} styleType={styleType} variant={variant}>
+        {children}
+      </TextButton>
+    );
   }
-  
-  return <ButtonBase onClick={onClick} styleType={styleType} variant={variant}>{children}</ButtonBase>
-
-}
-
+  if (variant === "contained") {
+    return (
+      <ContainedButton
+        onClick={onClick}
+        styleType={styleType}
+        variant={variant}
+      >
+        {children}
+      </ContainedButton>
+    );
+  }
+};
