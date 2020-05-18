@@ -4,7 +4,7 @@ export const textStyle = ({ theme, ...rest }) => css`
   font-family: ${theme.typography.button.fontFamily};
   cursor: pointer;
   color: ${(props) =>
-    props.styleType === "primary"
+    props.primary
       ? theme.palette.primary.light
       : theme.palette.secondary.light};
   text-transform: ${theme.typography.button.textTransform};
@@ -15,7 +15,7 @@ export const textStyle = ({ theme, ...rest }) => css`
   transition: all 0.4s ease 0s;
   :hover {
     color: ${(props) =>
-      props.styleType === "primary"
+      props.primary
         ? theme.palette.primary.main
         : theme.palette.secondary.main};
     letter-spacing: 2px;
@@ -27,13 +27,13 @@ export const containedStyle = ({ theme, ...rest }) => css`
   font-family: ${theme.typography.button.fontFamily};
   cursor: pointer;
   color: ${(props) =>
-    props.styleType === "primary"
+    props.primary
       ? theme.palette.primary.contrastText
       : theme.palette.secondary.contrastText};
   text-transform: ${theme.typography.button.textTransform};
   text-decoration: none;
   background: ${(props) =>
-    props.styleType === "primary"
+    props.primary
       ? theme.palette.primary.dark
       : theme.palette.secondary.dark};
   padding: 20px;
@@ -43,11 +43,11 @@ export const containedStyle = ({ theme, ...rest }) => css`
   transition: all 0.4s ease 0s;
   :hover {
     background: ${(props) =>
-      props.styleType === "primary"
+      props.primary
         ? theme.palette.primary.main
         : theme.palette.secondary.main};
     color: ${(props) =>
-      props.styleType === "primary"
+      props.primaary
         ? theme.palette.common.black
         : theme.palette.common.black};
     letter-spacing: 2px;

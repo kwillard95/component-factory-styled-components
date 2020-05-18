@@ -9,12 +9,12 @@ const ContainedButton = styled.button([containedStyle]);
 export const Button = ({
   onClick,
   variant = "text",
-  styleType = "primary",
+  primary,
   children,
 }) => {
   if (variant === "text") {
     return (
-      <TextButton onClick={onClick} styleType={styleType} variant={variant}>
+      <TextButton onClick={onClick} primary={primary} variant={variant}>
         {children}
       </TextButton>
     );
@@ -23,7 +23,7 @@ export const Button = ({
     return (
       <ContainedButton
         onClick={onClick}
-        styleType={styleType}
+        primary={primary}
         variant={variant}
       >
         {children}
