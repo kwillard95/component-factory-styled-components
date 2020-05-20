@@ -1,8 +1,7 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
 
-export const withCustomTheme = (Component, theme) => props => (
-  <ThemeProvider theme={theme}>
+export const withCustomTheme = (Theme, Component, theme) => props => (
+  <Theme theme={theme}>
     <Component {...props} />
-  </ThemeProvider>
+  </Theme>
 );
