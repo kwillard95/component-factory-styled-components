@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Styled Button Contained 1`] = `
+<button
+  className="sc-AxirZ djfkAu"
+  onClick={[Function]}
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots Styled Button Default 1`] = `
+<a
+  className="sc-AxjAm ZjuYV"
+  onClick={[Function]}
+>
+  Button
+</a>
+`;

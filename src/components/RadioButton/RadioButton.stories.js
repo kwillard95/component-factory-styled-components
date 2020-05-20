@@ -13,12 +13,16 @@ export const Default = () => {
   const [isMaleSelected, setIsMaleSelected] = useState(false);
 
   const toggleButton = (e) => {
-    if (e.target.value === 'female') {
+    stateHandler(e.target.value);
+  };
+
+  const stateHandler = (value) => {
+    if (value === 'female') {
       setIsFemaleSelected(!isFemaleSelected);
     } else {
       setIsMaleSelected(!isMaleSelected);
     }
-  };
+  }
 
   return (
     <div>
