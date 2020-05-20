@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 
-import { RadioButton } from '../components/RadioButton/RadioButton';
+import RadioButton from './RadioButton';
 
 export default {
   title: 'Radio Button',

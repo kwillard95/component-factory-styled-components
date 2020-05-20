@@ -6,7 +6,7 @@ import { textStyle, containedStyle } from "./Button-style";
 const TextButton = styled.a([textStyle]);
 const ContainedButton = styled.button([containedStyle]);
 
-export const Button = ({
+const Button = ({
   onClick,
   variant = "text",
   primary,
@@ -31,3 +31,5 @@ export const Button = ({
     );
   }
 };
+
+export default Button;

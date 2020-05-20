@@ -7,7 +7,7 @@ const Root = styled.div([RootStyle]);
 export const Fill = styled.div([FillStyle]);
 const Input = styled.input([InputStyle]);
 
-export const RadioButton = ({
+const RadioButton = ({
   onChange,
   onClick,
   name,
@@ -34,3 +34,5 @@ export const RadioButton = ({
     </Root>
   );
 };
+
+export default RadioButton;

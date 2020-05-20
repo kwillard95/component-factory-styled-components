@@ -2,7 +2,7 @@ import React from 'react';
 
 import { action } from '@storybook/addon-actions';
 
-import { Button } from '../components/Button/Button';
+import Button from './Button';
 // import { MyNewThemedButton } from '../App';
 
 export default {
