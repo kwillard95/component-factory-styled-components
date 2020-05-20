@@ -10,6 +10,4 @@ function loadStories() {
 }
 
 addDecorator(StylesDecorator);
-
-// configure(require.context('../src/stories', true, /\.stories\.js$/), module);
 configure(loadStories, module);
