@@ -1,4 +1,4 @@
-const designTokens = {
+const defaultDesignTokens = {
   palette: {
     common: {
       black: '#000',
@@ -101,4 +101,4 @@ const designTokens = {
   }
 }
 
-export default designTokens;
+export default defaultDesignTokens;
