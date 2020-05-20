@@ -87,6 +87,13 @@ const designTokens = {
       lineHeight: 1.75,
       textTransform: "uppercase",
       letterSpacing: "0.02857em"
+    },
+    radio: {
+      size: '20px',
+      borderColor: "#DDD",
+      background: "#FAFAFA",
+      fillColor: "#A475E4",
+      borderActive: "#A475E4"
     }
   },
   shape: {
