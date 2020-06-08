@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _Theme = _interopRequireDefault(require("../Theme/Theme"));
+
 var _RadioButtonStyle = require("./RadioButton-style");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -29,15 +31,17 @@ var RadioButton = function RadioButton(_ref) {
       value = _ref.value,
       checked = _ref.checked,
       children = _ref.children;
-  return /*#__PURE__*/_react.default.createElement(Root, null, /*#__PURE__*/_react.default.createElement("label", null, label, /*#__PURE__*/_react.default.createElement(Input, {
+  return /*#__PURE__*/_react.default.createElement(_Theme.default, null, /*#__PURE__*/_react.default.createElement(Root, null, /*#__PURE__*/_react.default.createElement("label", null, label, /*#__PURE__*/_react.default.createElement(Input, {
     type: "radio",
     value: value,
     onClick: onClick,
     onChange: onChange,
     name: name,
     checked: checked
-  }), /*#__PURE__*/_react.default.createElement(Fill, null)));
+  }), /*#__PURE__*/_react.default.createElement(Fill, null))));
 };
 
 var _default = RadioButton;
 exports.default = _default;
+
+//# sourceMappingURL=RadioButton.js.map

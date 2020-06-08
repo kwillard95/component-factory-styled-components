@@ -1,11 +1,10 @@
 import React from 'react';
-import { ThemeProvider } from "styled-components";
-import designTokens from "../src/themes/designTokens";
+import Theme from "../src/components/Theme/Theme";
 
 const StylesDecorator = storyFn => (
-   <ThemeProvider theme={designTokens}>
+   <Theme>
       {storyFn()}
-    </ThemeProvider>);
+    </Theme>);
 
 export default StylesDecorator;
 

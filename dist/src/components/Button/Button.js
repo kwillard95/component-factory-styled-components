@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _Theme = _interopRequireDefault(require("../Theme/Theme"));
+
 var _ButtonStyle = require("./Button-style");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -25,21 +27,23 @@ var Button = function Button(_ref) {
       children = _ref.children;
 
   if (variant === "text") {
-    return /*#__PURE__*/_react.default.createElement(TextButton, {
+    return /*#__PURE__*/_react.default.createElement(_Theme.default, null, /*#__PURE__*/_react.default.createElement(TextButton, {
       onClick: onClick,
       primary: primary,
       variant: variant
-    }, children);
+    }, children));
   }
 
   if (variant === "contained") {
-    return /*#__PURE__*/_react.default.createElement(ContainedButton, {
+    return /*#__PURE__*/_react.default.createElement(_Theme.default, null, /*#__PURE__*/_react.default.createElement(ContainedButton, {
       onClick: onClick,
       primary: primary,
       variant: variant
-    }, children);
+    }, children));
   }
 };
 
 var _default = Button;
 exports.default = _default;
+
+//# sourceMappingURL=Button.js.map

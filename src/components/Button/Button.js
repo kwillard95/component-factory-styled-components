@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Theme from '../Theme/Theme'
 import { textStyle, containedStyle } from "./Button-style";
 
 const TextButton = styled.a([textStyle]);
@@ -14,13 +15,16 @@ const Button = ({
 }) => {
   if (variant === "text") {
     return (
+      <Theme>
       <TextButton onClick={onClick} primary={primary} variant={variant}>
         {children}
       </TextButton>
+      </Theme>
     );
   }
   if (variant === "contained") {
     return (
+      <Theme>
       <ContainedButton
         onClick={onClick}
         primary={primary}
@@ -28,6 +32,7 @@ const Button = ({
       >
         {children}
       </ContainedButton>
+      </Theme>
     );
   }
 };

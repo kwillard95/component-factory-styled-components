@@ -6,28 +6,28 @@ import Button from './Button';
 // import { MyNewThemedButton } from '../App';
 
 export default {
-  title: 'Styled Button',
+  title: 'Button',
 };
 
-export const Default = () => {
+export const Text = () => {
   return (
-      <Button onClick={action('Styled button clicked')} variant="text" >Button</Button>
+    <div>
+      <Button onClick={action('Styled button clicked')} variant="text" primary>Default</Button>
+      <br />
+      <br />
+      <Button onClick={action('Styled button clicked')} variant="text">Secondary</Button>
+    </div>
   )
 }
+
 
 export const Contained = () => {
   return (
-    <Button onClick={action('Styled button clicked')} variant="contained" primary>Button</Button>
+    <div>
+      <Button onClick={action('Styled button clicked')} variant="contained" primary>Default</Button>
+      <br />
+      <br />
+      <Button onClick={action('Styled button clicked')} variant="contained">Secondary</Button>
+    </div>
   )
 }
-
-// export const LinkCustomTheme = () => {
-//   return (
-//     <MyNewThemedButton primary onClick={action('Styled button clicked')}>Styled Button</MyNewThemedButton>
-//   )
-// }
-// export const ContainedCustomTheme = () => {
-//   return (
-//     <MyNewThemedButton variant="contained" primary onClick={action('Styled button clicked')}>Styled Button</MyNewThemedButton>
-//   )
-// }

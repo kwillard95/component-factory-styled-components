@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Theme from '../Theme/Theme'
 import { RootStyle, FillStyle, InputStyle } from './RadioButton-style';
 
 const Root = styled.div([RootStyle]);
@@ -18,6 +19,7 @@ const RadioButton = ({
 }) => {
 
   return (
+    <Theme>
     <Root>
       <label>
         {label}
@@ -32,6 +34,7 @@ const RadioButton = ({
         <Fill />
       </label>
     </Root>
+    </Theme>
   );
 };
 

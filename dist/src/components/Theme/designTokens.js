@@ -1,4 +1,10 @@
-const defaultDesignTokens = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var defaultDesignTokens = {
   palette: {
     common: {
       black: '#000',
@@ -69,7 +75,7 @@ const defaultDesignTokens = {
     subtitle1: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontWeight: 400,
-      fontSize: "1rem", 
+      fontSize: "1rem",
       lineHeight: 1.75,
       letterSpacing: "0.00938em"
     },
@@ -99,6 +105,8 @@ const defaultDesignTokens = {
   shape: {
     borderRadius: '4px'
   }
-}
+};
+var _default = defaultDesignTokens;
+exports.default = _default;
 
-export default defaultDesignTokens;
+//# sourceMappingURL=designTokens.js.map
